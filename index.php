@@ -4,7 +4,7 @@ include "header.php";
 
 
 
-include "inicio.php";
+include "secciones/home/inicio.php";
 
 
 

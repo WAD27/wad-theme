@@ -1,6 +1,4 @@
-
-
-    <div class="grid-container">
+    <div id="home" class="grid-container">
 
       <div class="grid-x text-center align-middle">
 
