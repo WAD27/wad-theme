@@ -1,8 +1,6 @@
-// continuar con la configuracion de js.min y uglify
 var gulp = require('gulp')
 var sass = require('gulp-sass')
 var browserSync = require('browser-sync').create()
-var useref = require('gulp-useref')
 
 gulp.task('sass', function() {
   return gulp.src('scss/app.scss')
@@ -14,27 +12,16 @@ gulp.task('sass', function() {
   }))
 })
 
-gulp.task('browserSync', function() {
-  browserSync.init({
-    // server: { //for html as index
-    //   basedir: 'app/'
-    // },
-    proxy: 'http://localhost/ethbinary',// for php as index
-    options: {
-      reloadDelay: 150
-    },
-  })
+gulp.task('watch', ['browserSync','sass']/*order*/, function() {
+  gulp.watch('scss/**/*.scss',['sass'])
+  gulp.watch('secciones/**/*.php', browserSync.reload); 
+  gulp.watch('js/**/*.js', browserSync.reload);
 })
 
-// gulp.task('useref', function() {
-//   return gulp.src('*.php')
-//   .pipe(useref())
-//   .pipe(gulp.dest('./js/dist/'))
-// })
-
-gulp.task('watch', ['browserSync','sass'/*,'useref'*/]/*order*/, function() {
-  gulp.watch('scss/**/*.scss',['sass'])
-  gulp.watch('js/**/*.js', browserSync.reload)
-  gulp.watch('sections/**/*.php', browserSync.reload)
-  gulp.watch('*.php', browserSync.reload)//for php as index
+gulp.task('browserSync', function() {
+  browserSync.init({
+    server: {
+      basedir: '/'
+    }
+  })
 })
