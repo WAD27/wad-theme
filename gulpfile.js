@@ -12,16 +12,24 @@ gulp.task('sass', function() {
   }))
 })
 
-gulp.task('watch', ['browserSync','sass']/*order*/, function() {
-  gulp.watch('scss/**/*.scss',['sass'])
-  gulp.watch('secciones/**/*.php', browserSync.reload); 
-  gulp.watch('js/**/*.js', browserSync.reload);
-})
-
 gulp.task('browserSync', function() {
   browserSync.init({
-    server: {
-      basedir: '/'
-    }
+    // server: {
+    //   basedir: './' //for html as index
+    // }
+    proxy: 'http://localhost/wad',// for php as index
+    options: {
+      reloadDelay: 100
+    },
   })
 })
+// gulp.task('watch', ['browserSync','sass']/*order*/, function() {
+//   gulp.watch('scss/**/*.scss',['sass'])
+//   gulp.watch('secciones/**/*.php', browserSync.reload);
+//   gulp.watch('js/**/*.js', browserSync.reload);
+// })
+gulp.task('default', gulp.series(['browserSync','sass']/*order*/, function() {
+  gulp.watch('scss/**/*.scss',['sass'])
+  gulp.watch('secciones/**/*.php', browserSync.reload);
+  gulp.watch('js/**/*.js', browserSync.reload);
+}))
