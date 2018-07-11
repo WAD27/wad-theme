@@ -1,11 +1,9 @@
-    <div id="home" class="grid-container">
+    <div id="home" class="container">
 
-      <div class="grid-x text-center align-middle">
+      <div class="row">
 
-        <h1 class="cell">WAD</h1>
+        <h1 class="col-12 text-center">WAD</h1>
 
       </div>
-
-
 
     </div>

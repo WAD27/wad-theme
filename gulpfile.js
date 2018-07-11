@@ -2,34 +2,45 @@ var gulp = require('gulp')
 var sass = require('gulp-sass')
 var browserSync = require('browser-sync').create()
 
-gulp.task('sass', function() {
-  return gulp.src('scss/app.scss')
-  // return gulp.src('scss/**/*.scss')//accept any file in scss folder
-  .pipe(sass())
-  .pipe(gulp.dest('css/'))
+// ------------------------------------------------- configs
+var paths = {
+  sass: {
+    src: 'sass/**/*.{scss,sass}',
+    dest: 'css'
+  }
+};
+// ---------------------------------------------- Gulp Tasks
+gulp.task('sass', function () {
+  return gulp.src(paths.sass.src)
+  .pipe(sass().on('error', sass.logError))
+  .pipe(gulp.dest(paths.sass.dest))
   .pipe(browserSync.reload({
     stream: true
   }))
-})
+});
 
+// ------------------------------------ Gulp Testing Message
+gulp.task('message', function(){
+  console.log('Yeahhh!!');
+});
+//
 gulp.task('browserSync', function() {
   browserSync.init({
-    // server: {
-    //   basedir: './' //for html as index
-    // }
     proxy: 'http://localhost/wad',// for php as index
     options: {
       reloadDelay: 100
     },
   })
 })
-// gulp.task('watch', ['browserSync','sass']/*order*/, function() {
-//   gulp.watch('scss/**/*.scss',['sass'])
-//   gulp.watch('secciones/**/*.php', browserSync.reload);
-//   gulp.watch('js/**/*.js', browserSync.reload);
-// })
-gulp.task('default', gulp.series(['browserSync','sass']/*order*/, function() {
-  gulp.watch('scss/**/*.scss',['sass'])
-  gulp.watch('secciones/**/*.php', browserSync.reload);
-  gulp.watch('js/**/*.js', browserSync.reload);
+//
+// //
+var watcher1 = gulp.watch('scss/**/*.scss', gulp.series('sass'),browserSync.reload)
+var watcher2 = gulp.watch('secciones/**/*.php', browserSync.reload);
+var watcher3 = gulp.watch('js/**/*.js', browserSync.reload);
+//
+
+gulp.task('default', gulp.parallel('browserSync','sass','message', function() {
+  watcher1.on('change', function(path, stats) {});
+  watcher2.on('change', function(path, stats) {});
+  watcher3.on('change', function(path, stats) {});
 }))
