@@ -1,7 +1,7 @@
 @import "node_modules/bootstrap/scss/bootstrap";
-@import "settings.scss";
-@import "colores.scss";
+@import "bower_components/fontawesome/web-fonts-with-css/scss/fontawesome";
 @import "https://fonts.googleapis.com/css?family=Lato|Open+Sans";
+@import "settings.scss";
 //
 * {
   outline: 1px solid lime;
@@ -21,9 +21,9 @@ div, section, article {
 //Crea clases para titulos y contenidos
 @each $value in $text {
   #{nth($value, 1)} {
+    font-family: $font-content;
     font-size: #{nth($value, 2)};
     color: $color-white;
-    font-family: $font-content;
   }
 }
 

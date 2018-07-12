@@ -8,7 +8,9 @@ $color-dark: '#351535';
 // $color-accent: '';
 // $color-button-1: '';
 // $color-button-2: '';
-
+$colors: (
+// continuar con el array de colores
+);
 // Fonts
 $font-content: 'Open Sans', sans-serif;
 $font-headings: 'Lato', sans-serif;
@@ -32,3 +34,22 @@ p3 $paragraph3,
 link-active $link-active,
 link $link-inactive
 );
+
+//mixins
+@mixin prefix($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+}
+
+@mixin linear-gradient($fromColor, $toColor) {
+  background-color: $toColor; /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
+  background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
+  background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
+  background-image:         linear-gradient(top, $fromColor, $toColor);
+}
