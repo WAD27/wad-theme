@@ -2,14 +2,13 @@ var gulp = require('gulp')
 var sass = require('gulp-sass')
 var browserSync = require('browser-sync').create()
 
-// ------------------------------------------------- configs
 var paths = {
   sass: {
-    src: 'sass/**/*.{scss,sass}',
-    dest: 'css'
+    src: 'scss/app.scss',
+    dest: 'css/'
   }
 };
-// ---------------------------------------------- Gulp Tasks
+// 
 gulp.task('sass', function () {
   return gulp.src(paths.sass.src)
   .pipe(sass().on('error', sass.logError))
@@ -18,15 +17,14 @@ gulp.task('sass', function () {
     stream: true
   }))
 });
-
-// ------------------------------------ Gulp Testing Message
+//
 gulp.task('message', function(){
-  console.log('Yeahhh!!');
+  console.log('Go WAD Yeahhh!!');
 });
 //
 gulp.task('browserSync', function() {
   browserSync.init({
-    proxy: 'http://localhost/wad',// for php as index
+    proxy: 'http://localhost/wad',
     options: {
       reloadDelay: 100
     },
@@ -40,7 +38,7 @@ var watcher3 = gulp.watch('js/**/*.js', browserSync.reload);
 //
 
 gulp.task('default', gulp.parallel('browserSync','sass','message', function() {
-  watcher1.on('change', function(path, stats) {});
-  watcher2.on('change', function(path, stats) {});
-  watcher3.on('change', function(path, stats) {});
+  watcher1.on('change', gulp.series('message'), function(path, stats) {})
+  watcher2.on('change', function(path, stats) {})
+  watcher3.on('change', function(path, stats) {})
 }))

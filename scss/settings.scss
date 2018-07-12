@@ -1,0 +1,34 @@
+//Colors
+$color-black: '#000';
+$color-white: '#eee';
+$color-light: '#eee';
+$color-dark: '#351535';
+// $color-primary: '';
+// $color-secondary: '';
+// $color-accent: '';
+// $color-button-1: '';
+// $color-button-2: '';
+
+// Fonts
+$font-content: 'Open Sans', sans-serif;
+$font-headings: 'Lato', sans-serif;
+
+$title1: 28px;
+$title-secondary: 24px;
+$title-three: 22.5px;
+$paragraph1: 14px;
+$paragraph2: 11px;
+$paragraph3: 10px;
+$link-active: 12.5px;
+$link-inactive: 12.5px;
+
+$text: (
+title1 $title1,
+title2 $title-secondary,
+title3 $title-three,
+p1 $paragraph1,
+p2 $paragraph2,
+p3 $paragraph3,
+link-active $link-active,
+link $link-inactive
+);

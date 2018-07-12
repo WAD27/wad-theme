@@ -1,14 +1,31 @@
 @import "node_modules/bootstrap/scss/bootstrap";
+@import "settings.scss";
 @import "colores.scss";
-//
-// Variables generales
-
+@import "https://fonts.googleapis.com/css?family=Lato|Open+Sans";
 //
 * {
-  outline: 1px solid red;
+  outline: 1px solid lime;
 }
 
 // reset
+body {
+  font-family: $font-content;
+  color: $color-white;
+  h1, h2 ,h3, h4, h4, h5, h6 {
+    font-family: $font-headings;
+  }
+}
 div, section, article {
   height: 100%;
 }
+//Crea clases para titulos y contenidos
+@each $value in $text {
+  #{nth($value, 1)} {
+    font-size: #{nth($value, 2)};
+    color: $color-white;
+    font-family: $font-content;
+  }
+}
+
+//
+@import "responsivos.scss";
