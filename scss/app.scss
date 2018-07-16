@@ -4,7 +4,7 @@
 @import "settings.scss";
 //
 * {
-  outline: 1px solid lime;
+  outline: 1px solid $color-light;
 }
 
 // reset
@@ -18,14 +18,47 @@ body {
 div, section, article {
   height: 100%;
 }
+//Iteracion para crear clases (los arrays se encuentran en settings.scss)
 //Crea clases para titulos y contenidos
-@each $value in $text {
-  #{nth($value, 1)} {
-    font-family: $font-content;
-    font-size: #{nth($value, 2)};
-    color: $color-white;
+@each $value in $texts {
+  .text-#{nth($value, 1)} {
+    & {
+      font-family: $font-content;
+      font-size: #{nth($value, 2)};
+      color: $color-white;
+    }
   }
 }
+//Crea clases de color
+@each $value in $colors {
+  // textos
+  .color-#{nth($value,1)} {
+    & {
+      color:#{nth($value, 2)};
+    }
+  }
+  // fondos
+  .bg-#{nth($value,1)} {
+    & {
+      background-color: #{nth($value, 2)};
+    }
+  }
+}
+//
+.h-a {
+  height: auto;
+}
+////template mantenimiento
+#maintenance {
+  height: 100vh;
+  width: 100vw;
+  background-color: $color-dark;
+  h1 {
+    @extend .text-title1;
+  }
+}
+// fin template mantenimiento
+
 
 //
 @import "responsivos.scss";

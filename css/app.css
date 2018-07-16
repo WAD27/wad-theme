@@ -9805,53 +9805,109 @@ readers do not read off random characters that represent icons */
   width: auto; }
 
 * {
-  outline: 1px solid lime; }
+  outline: 1px solid #ddd; }
 
 body {
   font-family: "Open Sans", sans-serif;
-  color: "#eee"; }
+  color: #fff; }
   body h1, body h2, body h3, body h4, body h4, body h5, body h6 {
     font-family: "Lato", sans-serif; }
 
 div, section, article {
   height: 100%; }
 
-title1 {
+.text-title1, #maintenance h1 {
   font-family: "Open Sans", sans-serif;
   font-size: 28px;
-  color: "#eee"; }
+  color: #fff; }
 
-title2 {
+.text-title2 {
   font-family: "Open Sans", sans-serif;
   font-size: 24px;
-  color: "#eee"; }
+  color: #fff; }
 
-title3 {
+.text-title3 {
   font-family: "Open Sans", sans-serif;
   font-size: 22.5px;
-  color: "#eee"; }
+  color: #fff; }
 
-p1 {
+.text-p1 {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
-  color: "#eee"; }
+  color: #fff; }
 
-p2 {
+.text-p2 {
   font-family: "Open Sans", sans-serif;
   font-size: 11px;
-  color: "#eee"; }
+  color: #fff; }
 
-p3 {
+.text-p3 {
   font-family: "Open Sans", sans-serif;
   font-size: 10px;
-  color: "#eee"; }
+  color: #fff; }
 
-link-active {
+.text-link-active {
   font-family: "Open Sans", sans-serif;
   font-size: 12.5px;
-  color: "#eee"; }
+  color: #fff; }
 
-link {
+.text-link {
   font-family: "Open Sans", sans-serif;
   font-size: 12.5px;
-  color: "#eee"; }
+  color: #fff; }
+
+.color-black {
+  color: #000; }
+
+.bg-black {
+  background-color: #000; }
+
+.color-white {
+  color: #fff; }
+
+.bg-white {
+  background-color: #fff; }
+
+.color-light {
+  color: #ddd; }
+
+.bg-light {
+  background-color: #ddd; }
+
+.color-dark {
+  color: #351535; }
+
+.bg-dark {
+  background-color: #351535; }
+
+.color-gradient-1 {
+  color: #a234d5; }
+
+.bg-gradient-1 {
+  background-color: #a234d5; }
+
+.color-gradient-2 {
+  color: #d74059; }
+
+.bg-gradient-2 {
+  background-color: #d74059; }
+
+.color-button-1 {
+  color: #7a4488; }
+
+.bg-button-1 {
+  background-color: #7a4488; }
+
+.color-button-2 {
+  color: #d74059; }
+
+.bg-button-2 {
+  background-color: #d74059; }
+
+.h-a {
+  height: auto; }
+
+#maintenance {
+  height: 100vh;
+  width: 100vw;
+  background-color: #351535; }

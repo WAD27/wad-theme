@@ -1,11 +1,15 @@
-<div id="mantenimiento" class="grid-container expanded">
+<section id="maintenance" class="container-fluid">
 
-  <section class="grid-x grid-padding-x align-middle">
+  <div class="row">
 
-    <div class="cell text-center ">
-      Mantenimiento
-    </div>
+    <article class="col-12 h-a mx-auto">
 
-  </section>
+      <h1 class="col-12 text-center">
+        Pronto regresamos
+      </h1>
 
-</div>
+    </article>
+
+  </div>
+
+</section>

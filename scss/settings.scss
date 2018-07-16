@@ -1,38 +1,45 @@
 //Colors
-$color-black: '#000';
-$color-white: '#eee';
-$color-light: '#eee';
-$color-dark: '#351535';
-// $color-primary: '';
-// $color-secondary: '';
-// $color-accent: '';
-// $color-button-1: '';
-// $color-button-2: '';
+$color-black: #000;
+$color-white: #fff;
+$color-light: #ddd;
+$color-dark: #351535;
+$color-gradient-1: #a234d5;
+$color-gradient-2: #d74059;
+$color-button-1: #7a4488;
+$color-button-2: #d74059;
+
 $colors: (
-// continuar con el array de colores
+black $color-black,
+white $color-white,
+light $color-light,
+dark $color-dark,
+gradient-1 $color-gradient-1,
+gradient-2 $color-gradient-2,
+button-1 $color-button-1,
+button-2 $color-button-2
 );
+
 // Fonts
 $font-content: 'Open Sans', sans-serif;
 $font-headings: 'Lato', sans-serif;
+$text-title1: 28px;
+$text-title2: 24px;
+$text-title3: 22.5px;
+$text-p1: 14px;
+$text-p2: 11px;
+$text-p3: 10px;
+$text-link-active: 12.5px;
+$text-link: 12.5px;
 
-$title1: 28px;
-$title-secondary: 24px;
-$title-three: 22.5px;
-$paragraph1: 14px;
-$paragraph2: 11px;
-$paragraph3: 10px;
-$link-active: 12.5px;
-$link-inactive: 12.5px;
-
-$text: (
-title1 $title1,
-title2 $title-secondary,
-title3 $title-three,
-p1 $paragraph1,
-p2 $paragraph2,
-p3 $paragraph3,
-link-active $link-active,
-link $link-inactive
+$texts: (
+title1 $text-title1,
+title2 $text-title2,
+title3 $text-title3,
+p1 $text-p1,
+p2 $text-p2,
+p3 $text-p3,
+link-active $text-link-active,
+link $text-link
 );
 
 //mixins
@@ -46,10 +53,21 @@ link $link-inactive
 
 @mixin linear-gradient($fromColor, $toColor) {
   background-color: $toColor; /* Fallback Color */
-  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
-  background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
-  background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
-  background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
-  background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
+  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor));
+  background-image: -webkit-linear-gradient(top, $fromColor, $toColor);
+  background-image:    -moz-linear-gradient(top, $fromColor, $toColor);
+  background-image:     -ms-linear-gradient(top, $fromColor, $toColor);
+  background-image:      -o-linear-gradient(top, $fromColor, $toColor);
   background-image:         linear-gradient(top, $fromColor, $toColor);
+}
+
+// radial-gradient(circle at 50% 0%, #a234d5, #d74059)
+@mixin radial-gradient($percent1, $percent2, $fromColor, $toColor) {
+  background-color: $toColor; /* Fallback */
+  background-image: -webkit-gradient(circle, left top, left bottom, from($fromColor), to($toColor));
+  background-image: -webkit-radial-gradient(circle at $percent1 $percent2, $fromColor, $toColor);
+  background-image:    -moz-radial-gradient(circle at $percent1 $percent2, $fromColor, $toColor);
+  background-image:     -ms-radial-gradient(circle at $percent1 $percent2, $fromColor, $toColor);
+  background-image:      -o-radial-gradient(circle at $percent1 $percent2, $fromColor, $toColor);
+  background-image:         radial-gradient(circle at $percent1 $percent2, $fromColor, $toColor);
 }
