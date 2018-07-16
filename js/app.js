@@ -5,6 +5,8 @@ $(document).ready(function() {
 })
 
 function images() {
+
   $('imgLiquidFill').imgLiquid()
   $('imgLiquidNoFill').imgLiquid({fill:false})
+
 }

@@ -8,7 +8,7 @@ var paths = {
     dest: 'css/'
   }
 };
-// 
+//
 gulp.task('sass', function () {
   return gulp.src(paths.sass.src)
   .pipe(sass().on('error', sass.logError))
@@ -19,26 +19,36 @@ gulp.task('sass', function () {
 });
 //
 gulp.task('message', function(){
-  console.log('Go WAD Yeahhh!!');
+  for (var i = 0; i < 7; i++) {
+    console.log('Hola WAD dev' );
+  }
+});
+gulp.task('message_sass', function(){
+    console.log('Go WAD sass' );
+});
+gulp.task('message_php', function(){
+    console.log('Go WAD php' );
+});
+gulp.task('message_js', function(){
+    console.log('Go WAD jacascript' );
 });
 //
 gulp.task('browserSync', function() {
+
   browserSync.init({
     proxy: 'http://localhost/wad',
     options: {
       reloadDelay: 100
     },
   })
-})
-//
-// //
-var watcher1 = gulp.watch('scss/**/*.scss', gulp.series('sass'),browserSync.reload)
-var watcher2 = gulp.watch('secciones/**/*.php', browserSync.reload);
-var watcher3 = gulp.watch('js/**/*.js', browserSync.reload);
-//
 
-gulp.task('default', gulp.parallel('browserSync','sass','message', function() {
-  watcher1.on('change', gulp.series('message'), function(path, stats) {})
-  watcher2.on('change', function(path, stats) {})
-  watcher3.on('change', function(path, stats) {})
-}))
+  gulp.watch('scss/**/*.scss', gulp.series('sass','message_sass')).on('change', browserSync.reload)
+  gulp.watch('secciones/**/*.php', gulp.series('message_php')).on('change', browserSync.reload, function(file) {
+    console.log('1 file changed: ' + file);
+  })
+  gulp.watch('js/**/*.js', gulp.series('message_js')).on('change', browserSync.reload, function(file) {
+    console.log('1 file changed: ' + file);
+  })
+})
+
+gulp.task('default', gulp.parallel('sass','browserSync', 'message'))

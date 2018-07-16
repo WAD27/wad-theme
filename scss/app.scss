@@ -31,13 +31,13 @@ div, section, article {
 }
 //Crea clases de color
 @each $value in $colors {
-  // textos
+  // color textos
   .color-#{nth($value,1)} {
     & {
       color:#{nth($value, 2)};
     }
   }
-  // fondos
+  // color fondos
   .bg-#{nth($value,1)} {
     & {
       background-color: #{nth($value, 2)};
@@ -45,9 +45,9 @@ div, section, article {
   }
 }
 //
-.h-a {
-  height: auto;
-}
+// .h-a {
+//   height: auto !important;
+// }
 ////template mantenimiento
 #maintenance {
   height: 100vh;

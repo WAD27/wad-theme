@@ -2,13 +2,14 @@
 
   <div class="row">
 
-    <article class="col-12 h-a mx-auto">
+    <!-- <div class="col-12 align-items-center"> -->
+    <!-- <div class="col-12 h-a mx-auto"> -->
 
-      <h1 class="col-12 text-center">
-        Pronto regresamos
-      </h1>
+    <h1 class="col-12 text-center mx-auto">
+      Pronto regresamos
+    </h1>
 
-    </article>
+    <!-- </div> -->
 
   </div>
 
