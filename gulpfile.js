@@ -9,6 +9,7 @@ var paths = {
   }
 };
 //
+
 gulp.task('sass', function () {
   return gulp.src(paths.sass.src)
   .pipe(sass().on('error', sass.logError))
@@ -24,23 +25,16 @@ gulp.task('message', function(){
   }
 });
 gulp.task('message_sass', function(){
-    console.log('Go WAD sass' );
+  console.log('Go WAD sass' );
 });
 gulp.task('message_php', function(){
-    console.log('Go WAD php' );
+  console.log('Go WAD php' );
 });
 gulp.task('message_js', function(){
-    console.log('Go WAD jacascript' );
+  console.log('Go WAD javascript' );
 });
 //
-gulp.task('browserSync', function() {
-
-  browserSync.init({
-    proxy: 'http://localhost/wad',
-    options: {
-      reloadDelay: 100
-    },
-  })
+gulp.task('watch', function() {
 
   gulp.watch('scss/**/*.scss', gulp.series('sass','message_sass')).on('change', browserSync.reload)
   gulp.watch('secciones/**/*.php', gulp.series('message_php')).on('change', browserSync.reload, function(file) {
@@ -49,6 +43,21 @@ gulp.task('browserSync', function() {
   gulp.watch('js/**/*.js', gulp.series('message_js')).on('change', browserSync.reload, function(file) {
     console.log('1 file changed: ' + file);
   })
+
+})
+//
+gulp.task('browserSync', function() {
+
+  gulp.parallel('watch')
+
+  browserSync.init({
+    proxy: 'http://localhost/wad',
+    options: {
+      reloadDelay: 100
+    },
+  })
+
 })
 
-gulp.task('default', gulp.parallel('sass','browserSync', 'message'))
+
+gulp.task('default', gulp.parallel('sass','watch','browserSync','message'))
