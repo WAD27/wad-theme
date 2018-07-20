@@ -16,8 +16,8 @@
         ¿Necesita ayuda? Nosotros nos comunicamos contigo
       </p>
 
-      <form class="col-12" action="index.html" method="post">
-
+      <form id="form-landing" class="col-12" method="post">
+        <?php include "secciones/mantenimiento/contacto.php"; ?>
       </form>
 
       <?php include "secciones/general/social-links.php" ?>

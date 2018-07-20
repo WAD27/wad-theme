@@ -84,6 +84,8 @@ div, section, article {
 // fin template mantenimiento
 .h-a {height: auto;}
 .w-a {width: auto !important;}
+.hidden {display: none}
+.show {display: block}
 
 //
 @import "responsivos.scss";

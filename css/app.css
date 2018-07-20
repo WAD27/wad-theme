@@ -9964,3 +9964,9 @@ div, section, article {
 
 .w-a {
   width: auto !important; }
+
+.hidden {
+  display: none; }
+
+.show {
+  display: block; }
