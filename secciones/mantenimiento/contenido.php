@@ -16,7 +16,7 @@
         ¿Necesita ayuda? Nosotros nos comunicamos contigo
       </p>
 
-      <form id="form-landing" class="col-12" method="post">
+      <form id="form-landing container" class="col-12" method="post">
         <?php include "secciones/mantenimiento/contacto.php"; ?>
       </form>
 
@@ -35,14 +35,14 @@
         'Dirección: ',
       );
       $footer_info = array(
-        'daniela@wadweb.com.mx',
-        '55/13 95 94 66',
-        'CDMX, México',
+        '<a href="mailto:daniela@wadweb.com.mx"> daniela@wadweb.mx</a>',
+        '<a href="tel:5513959466"> 55/13 95 94 66</a>',
+        'CDMX, México'
       );
       for ($i=0; $i < count($footer_prefix) ; $i++):
         ?>
 
-        <div class="text-p1 col-4 h-a text-center">
+        <div class="text-p3 col-4 h-a text-center">
 
           <?php echo $footer_prefix[$i]; ?>
 

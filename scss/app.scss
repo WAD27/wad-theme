@@ -1,15 +1,15 @@
 @import "node_modules/bootstrap/scss/bootstrap";
-@import "bower_components/fontawesome/web-fonts-with-css/scss/fontawesome";
-// @import "bower_components/fontawesome/web-fonts-with-css/scss/fa-brands";
-@import "bower_components/fontawesome/web-fonts-with-css/scss/fa-solid";
-@import "bower_components/fontawesome/web-fonts-with-css/scss/fa-regular";
+@import "bower_components/fontawesome/web-fonts-with-css/scss/fontawesome.scss";
+@import "bower_components/fontawesome/web-fonts-with-css/scss/fa-solid.scss";
+@import "bower_components/fontawesome/web-fonts-with-css/scss/fa-regular.scss";
+@import "bower_components/fontawesome/web-fonts-with-css/scss/fa-brands";
 @import "https://fonts.googleapis.com/css?family=Lato|Open+Sans";
 @import "settings.scss";
 //
 * {
-  outline: 1px solid $color-light;
+  // outline: 1px solid $color-light;
 }
-$fa-font-path: "../bower_components/fontawesome/web-fonts-with-css/webfonts";
+$fa-font-path: "../bower_components/fontawesome/web-fonts-with-css/webfonts" !default;
 // general reset
 body {
   font-family: $font-content;
@@ -20,6 +20,9 @@ body {
 }
 div, section, article {
   height: 100%;
+}
+input, textarea, button {
+  border-radius: 4.5px;
 }
 //Iteracion para crear clases (los arrays se encuentran en settings.scss)
 //Crea clases para titulos y contenidos
@@ -67,6 +70,38 @@ div, section, article {
   }
   form {
     margin-top: 16px;
+    .boton_input {
+      margin-bottom: 18px;
+      #boton-seleccion-1, #boton-seleccion-2 {
+        // border-bottom: solid 1px $color-white;
+        border-bottom: solid 1px rgba(255,255,255,0.5);
+        cursor: pointer;
+      }
+    }
+    .landing-input {
+      padding: 0;
+      height: 40px;
+      @include linear-gradient(69deg,$color-button-1,$color-button-2);
+      border-radius: 4.5px;
+      label {
+        border: 2px solid transparent;
+        padding: 0;
+        margin: 0;
+      }
+      input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        padding-left: 16px;
+      }
+      #boton_form {
+        @include linear-gradient(69deg,$color-button-1,$color-button-2);
+        border: none;
+        &:hover {
+          @include linear-gradient(69deg,$color-button-2,$color-button-1);
+        }
+      }
+    }
   }
   .social {
     margin-top: 16px;
@@ -78,14 +113,30 @@ div, section, article {
     bottom: 0;
     span {
       font-weight: bolder;
+      padding-left: 6px;
+      a {
+        @extend .color-white;
+        &:hover {
+          @extend .color-gradient-1;
+          text-decoration: none;
+        }
+      }
     }
   }
+}// fin template mantenimiento
+//
+// redes
+.instagram {
+  @include .fa-instagram;
+  @extend .fas;
 }
-// fin template mantenimiento
+//fin redes
+
+
 .h-a {height: auto;}
 .w-a {width: auto !important;}
-.hidden {display: none}
-.show {display: block}
+.hidden {display: none;}
+.show {display: block;}
 
 //
 @import "responsivos.scss";

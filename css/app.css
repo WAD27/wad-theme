@@ -9835,8 +9835,19 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Free';
   font-weight: 400; }
 
-* {
-  outline: 1px solid #ddd; }
+/*!
+ * Font Awesome Free 5.1.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../webfonts/fa-brands-400.eot");
+  src: url("../webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-brands-400.woff2") format("woff2"), url("../webfonts/fa-brands-400.woff") format("woff"), url("../webfonts/fa-brands-400.ttf") format("truetype"), url("../webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
+
+.fab {
+  font-family: 'Font Awesome 5 Brands'; }
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -9847,44 +9858,47 @@ body {
 div, section, article {
   height: 100%; }
 
+input, textarea, button {
+  border-radius: 4.5px; }
+
 .text-title1 {
   font-family: "Open Sans", sans-serif;
-  font-size: 28px;
+  font-size: 32px;
   color: #fff; }
 
 .text-title2 {
   font-family: "Open Sans", sans-serif;
-  font-size: 24px;
+  font-size: 28px;
   color: #fff; }
 
 .text-title3 {
   font-family: "Open Sans", sans-serif;
-  font-size: 22.5px;
+  font-size: 24.5px;
   color: #fff; }
 
 .text-p1 {
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   color: #fff; }
 
 .text-p2 {
   font-family: "Open Sans", sans-serif;
-  font-size: 11px;
+  font-size: 16px;
   color: #fff; }
 
 .text-p3 {
   font-family: "Open Sans", sans-serif;
-  font-size: 10px;
+  font-size: 14px;
   color: #fff; }
 
 .text-link-active {
   font-family: "Open Sans", sans-serif;
-  font-size: 12.5px;
+  font-size: 14.5px;
   color: #fff; }
 
 .text-link {
   font-family: "Open Sans", sans-serif;
-  font-size: 12.5px;
+  font-size: 14.5px;
   color: #fff; }
 
 .color-black {
@@ -9893,7 +9907,7 @@ div, section, article {
 .bg-black {
   background-color: #000; }
 
-.color-white {
+.color-white, #maintenance .footer-landing span a {
   color: #fff; }
 
 .bg-white {
@@ -9911,7 +9925,7 @@ div, section, article {
 .bg-dark {
   background-color: #351535; }
 
-.color-gradient-1 {
+.color-gradient-1, #maintenance .footer-landing span a:hover {
   color: #a234d5; }
 
 .bg-gradient-1 {
@@ -9949,6 +9963,51 @@ div, section, article {
     font-weight: bold; }
   #maintenance form {
     margin-top: 16px; }
+    #maintenance form .boton_input {
+      margin-bottom: 18px; }
+      #maintenance form .boton_input #boton-seleccion-1, #maintenance form .boton_input #boton-seleccion-2 {
+        border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+        cursor: pointer; }
+    #maintenance form .landing-input {
+      padding: 0;
+      height: 40px;
+      background-color: #d74059;
+      /* Fallback Color */
+      background-image: -webkit-gradient(69deg, left, right, from(#7a4488), to(#d74059));
+      background-image: -webkit-linear-gradient(69deg, #7a4488, #d74059);
+      background-image: -moz-linear-gradient(69deg, #7a4488, #d74059);
+      background-image: -ms-linear-gradient(69deg, #7a4488, #d74059);
+      background-image: -o-linear-gradient(69deg, #7a4488, #d74059);
+      background-image: linear-gradient(69deg, #7a4488, #d74059);
+      border-radius: 4.5px; }
+      #maintenance form .landing-input label {
+        border: 2px solid transparent;
+        padding: 0;
+        margin: 0; }
+      #maintenance form .landing-input input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        padding-left: 16px; }
+      #maintenance form .landing-input #boton_form {
+        background-color: #d74059;
+        /* Fallback Color */
+        background-image: -webkit-gradient(69deg, left, right, from(#7a4488), to(#d74059));
+        background-image: -webkit-linear-gradient(69deg, #7a4488, #d74059);
+        background-image: -moz-linear-gradient(69deg, #7a4488, #d74059);
+        background-image: -ms-linear-gradient(69deg, #7a4488, #d74059);
+        background-image: -o-linear-gradient(69deg, #7a4488, #d74059);
+        background-image: linear-gradient(69deg, #7a4488, #d74059);
+        border: none; }
+        #maintenance form .landing-input #boton_form:hover {
+          background-color: #7a4488;
+          /* Fallback Color */
+          background-image: -webkit-gradient(69deg, left, right, from(#d74059), to(#7a4488));
+          background-image: -webkit-linear-gradient(69deg, #d74059, #7a4488);
+          background-image: -moz-linear-gradient(69deg, #d74059, #7a4488);
+          background-image: -ms-linear-gradient(69deg, #d74059, #7a4488);
+          background-image: -o-linear-gradient(69deg, #d74059, #7a4488);
+          background-image: linear-gradient(69deg, #d74059, #7a4488); }
   #maintenance .social {
     margin-top: 16px; }
   #maintenance .footer-landing {
@@ -9957,7 +10016,10 @@ div, section, article {
     left: 0;
     bottom: 0; }
     #maintenance .footer-landing span {
-      font-weight: bolder; }
+      font-weight: bolder;
+      padding-left: 6px; }
+      #maintenance .footer-landing span a:hover {
+        text-decoration: none; }
 
 .h-a, #maintenance .logo-landing {
   height: auto; }

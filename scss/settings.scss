@@ -22,14 +22,14 @@ button-2 $color-button-2
 // Fonts
 $font-content: 'Open Sans', sans-serif;
 $font-headings: 'Lato', sans-serif;
-$text-title1: 28px;
-$text-title2: 24px;
-$text-title3: 22.5px;
-$text-p1: 14px;
-$text-p2: 11px;
-$text-p3: 10px;
-$text-link-active: 12.5px;
-$text-link: 12.5px;
+$text-title1: 32px;
+$text-title2: 28px;
+$text-title3: 24.5px;
+$text-p1: 18px;
+$text-p2: 16px;
+$text-p3: 14px;
+$text-link-active: 14.5px;
+$text-link: 14.5px;
 
 $texts: (
 title1 $text-title1,
@@ -51,23 +51,23 @@ link $text-link
   #{$name}: #{$argument};
 }
 
-@mixin linear-gradient($fromColor, $toColor) {
+@mixin linear-gradient($type,$fromColor, $toColor) {
   background-color: $toColor; /* Fallback Color */
-  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor));
-  background-image: -webkit-linear-gradient(top, $fromColor, $toColor);
-  background-image:    -moz-linear-gradient(top, $fromColor, $toColor);
-  background-image:     -ms-linear-gradient(top, $fromColor, $toColor);
-  background-image:      -o-linear-gradient(top, $fromColor, $toColor);
-  background-image:         linear-gradient(top, $fromColor, $toColor);
+  background-image: -webkit-gradient($type, left, right, from($fromColor), to($toColor));
+  background-image: -webkit-linear-gradient($type, $fromColor, $toColor);
+  background-image:    -moz-linear-gradient($type, $fromColor, $toColor);
+  background-image:     -ms-linear-gradient($type, $fromColor, $toColor);
+  background-image:      -o-linear-gradient($type, $fromColor, $toColor);
+  background-image:         linear-gradient($type, $fromColor, $toColor);
 }
 
 // radial-gradient(circle at 50% 0%, #a234d5, #d74059)
 @mixin radial-gradient($percent1, $percent2, $fromColor, $toColor) {
   background-color: $toColor; /* Fallback */
-  background-image: -webkit-gradient(circle, left top, left bottom, from($fromColor), to($toColor));
-  background-image: -webkit-radial-gradient(circle at $percent1 $percent2, $fromColor, $toColor);
-  background-image:    -moz-radial-gradient(circle at $percent1 $percent2, $fromColor, $toColor);
-  background-image:     -ms-radial-gradient(circle at $percent1 $percent2, $fromColor, $toColor);
-  background-image:      -o-radial-gradient(circle at $percent1 $percent2, $fromColor, $toColor);
-  background-image:         radial-gradient(circle at $percent1 $percent2, $fromColor, $toColor);
+  background-image: -webkit-gradient(circle, left top, left bottom, from($fromColor), to($toColor)) !important;
+  background-image: -webkit-radial-gradient(circle at $percent1 $percent2, $fromColor, $toColor) !important;
+  background-image:    -moz-radial-gradient(circle at $percent1 $percent2, $fromColor, $toColor) !important;
+  background-image:     -ms-radial-gradient(circle at $percent1 $percent2, $fromColor, $toColor) !important;
+  background-image:      -o-radial-gradient(circle at $percent1 $percent2, $fromColor, $toColor) !important;
+  background-image:         radial-gradient(circle at $percent1 $percent2, $fromColor, $toColor) !important;
 }

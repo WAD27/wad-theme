@@ -3,7 +3,7 @@
   <div class="row justify-content-center h-a">
 
     <?php
-    $iconos = array(
+    $icono = array(
       'gplus',
       'facebook',
       'linkedin',
@@ -23,8 +23,10 @@
 
       ?>
 
-      <div class="col-1 text-center h-a">
-        <i class="fab fa-instagram"></i>
+      <div class="col-lg-1 col-md-2 text-center h-a">
+        <a href="<?php echo $links[$i]?>">
+          <i class="<?php echo $icono[$i]?>"></i>
+        </a>
       </div>
 
     <?php endfor; ?>

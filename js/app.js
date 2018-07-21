@@ -52,17 +52,24 @@ function landing_form_validation() {
 }
 
 function toggleInput() {
+  //borderDefault
+  $("#boton-seleccion-1").css({"border-bottom":"solid 1px rgba(255,255,255,1)","font-weight":"bolder"})
+  //
   $("#boton-seleccion-1, #boton-seleccion-2").on('click', function() {
     if($("#seleccionado-2").hasClass('hidden')) {
       $("#tel").removeAttr('required',false)
       $("#email").attr('required',true)
       $("#seleccionado-1, #seleccionado-2").toggleClass('hidden')
-      $(".boton_input div").toggleClass("color-blanco-bg color-primario-0")
+      // $(".boton_input div").toggleClass("color-blanco-bg color-primario-0")
+      $("#boton-seleccion-2").css({"border-bottom":"solid 1px rgba(255,255,255,1)","font-weight":"bolder"})
+      $("#boton-seleccion-1").css({"border-bottom":"solid 1px rgba(255,255,255,0.5)","font-weight":"lighter"})
     } else if($("#seleccionado-1").hasClass('hidden')) {
       $("#email").removeAttr('required',false)
       $("#tel").attr('required',true)
       $("#seleccionado-1, #seleccionado-2").toggleClass('hidden')
-      $(".boton_input div").toggleClass("color-blanco-bg color-primario-0")
+      // $(".boton_input div").toggleClass("color-blanco-bg color-primario-0")
+      $("#boton-seleccion-1").css({"border-bottom":"solid 1px rgba(255,255,255,1)","font-weight":"bolder"})
+      $("#boton-seleccion-2").css({"border-bottom":"solid 1px rgba(255,255,255,0.5)","font-weight":"lighter"})
     }
   })
 }
