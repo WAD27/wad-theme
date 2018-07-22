@@ -12096,7 +12096,7 @@ input, textarea, button {
 .bg-dark {
   background-color: #351535; }
 
-.color-gradient-1, #maintenance .footer-landing span a:hover {
+.color-gradient-1 {
   color: #a234d5; }
 
 .bg-gradient-1 {
@@ -12119,6 +12119,12 @@ input, textarea, button {
 
 .bg-button-2 {
   background-color: #d74059; }
+
+.color-social-1 {
+  color: gray; }
+
+.bg-social-1 {
+  background-color: gray; }
 
 #maintenance {
   height: 100vh;
@@ -12180,7 +12186,21 @@ input, textarea, button {
           background-image: -o-linear-gradient(69deg, #d74059, #7a4488);
           background-image: linear-gradient(69deg, #d74059, #7a4488); }
   #maintenance .social {
-    margin-top: 16px; }
+    margin-top: 16px;
+    height: 34.5; }
+    #maintenance .social .link-social-icon {
+      height: 44.5px;
+      width: 44.5px;
+      border-radius: 50px;
+      border: 2px solid gray;
+      margin: 0 auto; }
+      #maintenance .social .link-social-icon a {
+        color: gray;
+        padding: 0; }
+        #maintenance .social .link-social-icon a i {
+          font-size: 18px; }
+        #maintenance .social .link-social-icon a:hover {
+          color: #d74059; }
   #maintenance .footer-landing {
     padding: 16px 0;
     position: fixed;
@@ -12190,6 +12210,7 @@ input, textarea, button {
       font-weight: bolder;
       padding-left: 6px; }
       #maintenance .footer-landing span a:hover {
+        color: #d74059;
         text-decoration: none; }
 
 .h-a, #maintenance .logo-landing {

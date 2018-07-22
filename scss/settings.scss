@@ -7,6 +7,7 @@ $color-gradient-1: #a234d5;
 $color-gradient-2: #d74059;
 $color-button-1: #7a4488;
 $color-button-2: #d74059;
+$color-social-1: gray;
 
 $colors: (
 black $color-black,
@@ -16,7 +17,8 @@ dark $color-dark,
 gradient-1 $color-gradient-1,
 gradient-2 $color-gradient-2,
 button-1 $color-button-1,
-button-2 $color-button-2
+button-2 $color-button-2,
+social-1 $color-social-1
 );
 
 // Fonts

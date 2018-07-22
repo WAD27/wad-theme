@@ -4,7 +4,7 @@
 
     <?php
     $icono = array(
-      'gplus',
+      'google-plus-g',
       'facebook',
       'linkedin',
       'twitter',
@@ -23,10 +23,12 @@
 
       ?>
 
-      <div class="col-lg-1 col-md-2 text-center h-a">
-        <a href="<?php echo $links[$i]?>" target="_blank">
-          <i class="text-p3 fab fa-instagram"></i>
-        </a>
+      <div class="col-lg-1 col-md-2 h-a">
+        <div class="link-social-icon d-flex"><!-- borde -->
+          <a class="color-social-1 col-12 text-center align-self-center" href="<?php echo $links[$i]?>" target="_blank">
+            <i class="fab fa-<?php echo $icono[$i]?>"></i>
+          </a>
+        </div>
       </div>
 
     <?php endfor; ?>

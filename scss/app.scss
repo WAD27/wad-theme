@@ -107,6 +107,23 @@ input, textarea, button {
   }
   .social {
     margin-top: 16px;
+    height: 34.5;
+    .link-social-icon {
+      height: 44.5px;
+      width: 44.5px;
+      border-radius: 50px;
+      border: 2px solid $color-social-1;
+      margin: 0 auto;
+      a {
+        color: $color-social-1;
+        padding: 0;
+        i {
+          font-size: 18px;
+          // color: $color-social-1;
+        }
+        &:hover {color: $color-gradient-2;}
+      }
+    }
   }
   .footer-landing {
     padding: 16px 0;
@@ -119,7 +136,7 @@ input, textarea, button {
       a {
         @extend .color-white;
         &:hover {
-          @extend .color-gradient-1;
+          color: $color-gradient-2;
           text-decoration: none;
         }
       }
