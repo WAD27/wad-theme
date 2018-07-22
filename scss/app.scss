@@ -1,15 +1,17 @@
+$fa-font-path: "../webfonts" !default;
+//
 @import "node_modules/bootstrap/scss/bootstrap";
 @import "bower_components/fontawesome/web-fonts-with-css/scss/fontawesome.scss";
-@import "bower_components/fontawesome/web-fonts-with-css/scss/fa-solid.scss";
+@import "bower_components/fontawesome/web-fonts-with-css/scss/fa-brands.scss";
 @import "bower_components/fontawesome/web-fonts-with-css/scss/fa-regular.scss";
-@import "bower_components/fontawesome/web-fonts-with-css/scss/fa-brands";
+@import "bower_components/fontawesome/web-fonts-with-css/scss/fa-solid.scss";
+@import "bower_components/fontawesome/web-fonts-with-css/scss/v4-shims.scss";
 @import "https://fonts.googleapis.com/css?family=Lato|Open+Sans";
 @import "settings.scss";
 //
 * {
   // outline: 1px solid $color-light;
 }
-$fa-font-path: "../bower_components/fontawesome/web-fonts-with-css/webfonts" !default;
 // general reset
 body {
   font-family: $font-content;
@@ -125,13 +127,6 @@ input, textarea, button {
   }
 }// fin template mantenimiento
 //
-// redes
-.instagram {
-  @include .fa-instagram;
-  @extend .fas;
-}
-//fin redes
-
 
 .h-a {height: auto;}
 .w-a {width: auto !important;}

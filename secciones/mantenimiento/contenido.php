@@ -35,7 +35,7 @@
         'Dirección: ',
       );
       $footer_info = array(
-        '<a href="mailto:daniela@wadweb.com.mx"> daniela@wadweb.mx</a>',
+        '<a href="mailto:daniela@wadweb.mx"> daniela@wadweb.mx</a>',
         '<a href="tel:5513959466"> 55/13 95 94 66</a>',
         'CDMX, México'
       );

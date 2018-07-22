@@ -19,13 +19,13 @@
       'http://instagram.com'
     );
 
-    for ($i=0; $i < count($iconos); $i++):
+    for ($i=0; $i < count($icono); $i++):
 
       ?>
 
       <div class="col-lg-1 col-md-2 text-center h-a">
-        <a href="<?php echo $links[$i]?>">
-          <i class="<?php echo $icono[$i]?>"></i>
+        <a href="<?php echo $links[$i]?>" target="_blank">
+          <i class="text-p3 fab fa-instagram"></i>
         </a>
       </div>
 
