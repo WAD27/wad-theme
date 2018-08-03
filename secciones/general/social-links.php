@@ -23,7 +23,7 @@
 
       ?>
 
-      <div class="col-lg-1 col-md-2 h-a">
+      <div class="contenedor_social col-2 col-lg-1 h-a">
         <div class="link-social-icon d-flex"><!-- borde -->
           <a class="color-social-1 col-12 text-center align-self-center" href="<?php echo $links[$i]?>" target="_blank">
             <i class="fab fa-<?php echo $icono[$i]?>"></i>

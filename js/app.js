@@ -1,9 +1,44 @@
 $(document).ready(function() {
 
+  var expr = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
+  $("#form-landing").submit(function() {
+    var envio = false
+    var telefono = $('#tel')
+    var correo = $('#email')
+
+    if (!telefono.val() || !correo.val()) {
+      if ($("#seleccionado-2").hasClass('hidden')) {
+        if (!telefono.val()) {
+          $("#mensaje_res").html('Falta el campo "Teléfono"')
+          return false
+        } else {envio = true}
+      } else if ($("#seleccionado-1").hasClass('hidden')) {
+        if (!correo.val() || !expr.test(correo.val())) {
+          $("#mensaje_res").html('Falta el campo "Correo" o un formato admitido "@" ')
+          return false;
+        } else {envio = true}
+      }
+    } else {envio = true}
+  // } else {alert("Inputs vacios")}
+//
+    if (envio === true) {
+      $.post('secciones/mantenimiento/mail.php', {
+        telephone: telefono.val(),
+        email: correo.val(),
+        contactFormSubmitted: 'yes'
+      },
+      function(data) {
+        $("#mensaje_res").html(data);
+      })
+      return false
+    }
+    //
+  });
+
   images()
-  //
-  landing_form_validation()
+  //fomrulario mantenimiento
   toggleInput()
+  // landing_form_validation()
 
 })
 
@@ -25,19 +60,20 @@ function landing_form_validation() {
     if (!telefono.val() || !correo.val()) {
       if ($("#seleccionado-2").hasClass('hidden')) {
         if (!telefono.val()) {
-          $("#mensaje_res").html('Falta el campo "Teléfono"');
-          return false;
+          $("#mensaje_res").html('Falta el campo "Teléfono"')
+          return false
         } else {envio = true}
       } else if ($("#seleccionado-1").hasClass('hidden')) {
         if (!correo.val() || !expr.test(correo.val())) {
-          $("#mensaje_res").html('Falta el campo "Correo" o un formato admitido "@" ');
+          $("#mensaje_res").html('Falta el campo "Correo" o un formato admitido "@" ')
           return false;
         } else {envio = true}
       }
     } else {envio = true}
-
+  // } else {alert("Inputs vacios")}
+//
     if (envio === true) {
-      $.post('form/mail.php', {
+      $.post('secciones/mantenimiento/mail.php', {
         telephone: telefono.val(),
         email: correo.val(),
         contactFormSubmitted: 'yes'

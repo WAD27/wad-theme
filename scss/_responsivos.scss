@@ -1,0 +1,46 @@
+@include media-breakpoint-down(lg) {
+
+}
+
+@include media-breakpoint-down(md) {
+  //mantenimiento
+  #maintenance {
+    height: auto;
+    padding-top: 32px;
+    h1 {
+      margin-bottom: 32px;
+    }
+    form {
+      .landing-input {
+        input {
+          font-size: 16px;
+        }
+      }
+    }
+    .footer-landing {
+      position: relative;
+    }
+  }// fin template mantenimiento
+}
+
+@include media-breakpoint-down(sm) {
+
+}
+@include media-breakpoint-down(xs) {
+  //mantenimiento
+  #maintenance {
+    form {
+      .boton_input {
+        #boton-seleccion-1 {
+          margin-bottom: 18px;
+        }
+      }
+      .landing-input {
+        input {
+          font-size: 10px;
+        }
+      }
+    }
+
+  }// fin template mantenimiento
+}

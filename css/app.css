@@ -12165,7 +12165,8 @@ input, textarea, button {
         width: 100%;
         height: 100%;
         border: none;
-        padding-left: 16px; }
+        padding-left: 16px;
+        font-size: 10px; }
       #maintenance form .landing-input #boton_form {
         background-color: #d74059;
         /* Fallback Color */
@@ -12187,20 +12188,23 @@ input, textarea, button {
           background-image: linear-gradient(69deg, #d74059, #7a4488); }
   #maintenance .social {
     margin-top: 16px;
+    margin-bottom: 16px;
     height: 34.5; }
-    #maintenance .social .link-social-icon {
-      height: 44.5px;
-      width: 44.5px;
-      border-radius: 50px;
-      border: 2px solid gray;
-      margin: 0 auto; }
-      #maintenance .social .link-social-icon a {
-        color: gray;
-        padding: 0; }
-        #maintenance .social .link-social-icon a i {
-          font-size: 18px; }
-        #maintenance .social .link-social-icon a:hover {
-          color: #d74059; }
+    #maintenance .social .contenedor_social {
+      padding: 0; }
+      #maintenance .social .contenedor_social .link-social-icon {
+        height: 44.5px;
+        width: 44.5px;
+        border-radius: 50px;
+        border: 2px solid gray;
+        margin: 0 auto; }
+        #maintenance .social .contenedor_social .link-social-icon a {
+          color: gray;
+          padding: 0; }
+          #maintenance .social .contenedor_social .link-social-icon a i {
+            font-size: 18px; }
+          #maintenance .social .contenedor_social .link-social-icon a:hover {
+            color: #d74059; }
   #maintenance .footer-landing {
     padding: 16px 0;
     position: fixed;
@@ -12224,3 +12228,20 @@ input, textarea, button {
 
 .show {
   display: block; }
+
+@media (max-width: 991.98px) {
+  #maintenance {
+    height: auto;
+    padding-top: 32px; }
+    #maintenance h1 {
+      margin-bottom: 32px; }
+    #maintenance form .landing-input input {
+      font-size: 16px; }
+    #maintenance .footer-landing {
+      position: relative; } }
+
+@media (max-width: 575.98px) {
+  #maintenance form .boton_input #boton-seleccion-1 {
+    margin-bottom: 18px; }
+  #maintenance form .landing-input input {
+    font-size: 10px; } }

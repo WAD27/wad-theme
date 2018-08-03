@@ -34,6 +34,17 @@ gulp.task('message_js', function(){
   console.log('Go WAD javascript' );
 });
 //
+gulp.task('browserSync', function() {
+
+  browserSync.init({
+    proxy: 'http://localhost/wad',
+    options: {
+      reloadDelay: 100
+    },
+  })
+
+})
+//
 gulp.task('watch', function() {
 
   gulp.watch('scss/**/*.scss', gulp.series('sass','message_sass')).on('change', browserSync.reload)
@@ -45,19 +56,8 @@ gulp.task('watch', function() {
   })
 
 })
+
+gulp.task('default', gulp.parallel('sass','browserSync','message','watch'))
+
 //
-gulp.task('browserSync', function() {
-
-  gulp.parallel('watch')
-
-  browserSync.init({
-    proxy: 'http://localhost/wad',
-    options: {
-      reloadDelay: 100
-    },
-  })
-
-})
-
-
-gulp.task('default', gulp.parallel('sass','watch','browserSync','message'))
+// exports.watch = watch

@@ -16,7 +16,7 @@
         ¿Necesita ayuda? Nosotros nos comunicamos contigo
       </p>
 
-      <form id="form-landing container" class="col-12" method="post">
+      <form id="form-landing container" action="" class="col-12" method="post">
         <?php include "secciones/mantenimiento/contacto.php"; ?>
       </form>
 
@@ -42,13 +42,17 @@
       for ($i=0; $i < count($footer_prefix) ; $i++):
         ?>
 
-        <div class="text-p3 col-4 h-a text-center">
+        <div class="text-p3 col-12 col-lg-4 h-a text-center">
 
-          <?php echo $footer_prefix[$i]; ?>
+          <p>
+            <?php echo $footer_prefix[$i]; ?>
 
           <span>
             <?php echo $footer_info[$i]; ?>
           </span>
+
+        </p>
+
         </div>
 
       <?php endfor; ?>
