@@ -30,11 +30,9 @@
 
 </div>
 
-
-
 <!-- respuesta -->
-<p id="formResponse"><?php //if($error) { echo($error); } ?></p>
-<p id="mensaje_res" class=""><i class="fas fa-success"></i></p>
-<!-- <div class="alert callout" style="display: none;">
+<p id="formResponse" class="text-center" style="margin:16px 16px;"></p>
+<p id="mensaje_res" class="text-center"><i class="fas fa-success"></i></p>
+<div class="alert callout" style="display: none;">
   <p class="warning"><i class="fa fa-alert"></i> Hay algunos errores, faltan campos obligatorios.</p>
-</div> -->
+</div>

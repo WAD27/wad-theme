@@ -96,7 +96,8 @@ input, textarea, button {
         height: 100%;
         border: none;
         padding-left: 16px;
-        font-size: 10px;
+        font-size: 14px;
+        color: gray;
       }
       #boton_form {
         @include linear-gradient(69deg,$color-button-1,$color-button-2);

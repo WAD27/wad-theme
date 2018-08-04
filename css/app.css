@@ -12166,7 +12166,8 @@ input, textarea, button {
         height: 100%;
         border: none;
         padding-left: 16px;
-        font-size: 10px; }
+        font-size: 14px;
+        color: gray; }
       #maintenance form .landing-input #boton_form {
         background-color: #d74059;
         /* Fallback Color */
@@ -12239,6 +12240,10 @@ input, textarea, button {
       font-size: 16px; }
     #maintenance .footer-landing {
       position: relative; } }
+
+@media (max-width: 767.98px) {
+  #maintenance form .landing-input input {
+    font-size: 14px; } }
 
 @media (max-width: 575.98px) {
   #maintenance form .boton_input #boton-seleccion-1 {
