@@ -6,7 +6,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
     $email = $_POST['email'];
     $phone = $_POST['telephone'];
 
-    else if (strlen($phone) < 10) {
+    if (strlen($phone) < 10) {
       // exit("Necesitamos 10 números en tu teléfono.");
       echo "<script>$('#formResponse').html('Necesitamos 10 números en tu teléfono.'); </script>";
     }
