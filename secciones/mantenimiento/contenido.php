@@ -16,7 +16,7 @@
         ¿Necesita ayuda? Nosotros nos comunicamos contigo
       </p>
 
-      <form id="form-landing container" action="" class="col-12" method="post">
+      <form id="form-landing" action="" class="col-12 container" method="post">
         <?php include "secciones/mantenimiento/contacto.php"; ?>
       </form>
 

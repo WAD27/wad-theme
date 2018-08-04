@@ -13,13 +13,11 @@
     <div class="landing-input row col-lg-4 col-sm-10">
 
       <label id="seleccionado-1" class="col-8">
-        <input type="tel" name="telephone" id="tel" placeholder="Ingresa tu número de teléfono" class="input text-p3" value="" required>
-        <!-- <span class="form-error"> Este campo es requerido.</span> -->
+        <input type="tel" name="telephone" id="telephone" placeholder="Ingresa tu número de teléfono" class="input text-p3" value="" required="required">
       </label>
       <!-- opcion dos escondida -->
       <label id="seleccionado-2" class="col-8 hidden">
-        <input type="email"  name="email" id="email" placeholder="Ingresa tu dirección correo" class="input text-p3" value="" required>
-        <!-- <span class="form-error"> Este campo es requerido.</span> -->
+        <input type="email"  name="email" id="email" placeholder="Ingresa tu dirección correo" class="input text-p3" value="" >
       </label>
 
       <!-- <fieldset class="col-2"> -->
@@ -36,7 +34,7 @@
 
 <!-- respuesta -->
 <p id="formResponse"><?php //if($error) { echo($error); } ?></p>
-<p id="mensaje_res" class="success"><i class="fas fa-success"></i></p>
-<div data-abide-error class="alert callout" style="display: none;">
+<p id="mensaje_res" class=""><i class="fas fa-success"></i></p>
+<!-- <div class="alert callout" style="display: none;">
   <p class="warning"><i class="fa fa-alert"></i> Hay algunos errores, faltan campos obligatorios.</p>
-</div>
+</div> -->

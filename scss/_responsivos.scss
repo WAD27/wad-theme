@@ -24,7 +24,15 @@
 }
 
 @include media-breakpoint-down(sm) {
-
+  #maintenance {
+    form {
+      .landing-input {
+        input {
+          font-size: 14px;
+        }
+      }
+    }
+  }// fin template mantenimiento
 }
 @include media-breakpoint-down(xs) {
   //mantenimiento
