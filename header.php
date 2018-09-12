@@ -8,7 +8,9 @@
     <meta name="keywords" content="">
     <title>WAD Web Theme</title>
     <link rel="stylesheet" href="css/app.css">
-    
+
   </head>
 
     <body>
+
+      <main class="container-fluid">

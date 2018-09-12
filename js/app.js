@@ -14,8 +14,8 @@ function images() {
 
 }
 
+// Mantenimiento form response
 function landing_form_validation() {
-  // Mantenimiento form response
   var expr = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
   $("#form-landing").submit(function() {
     var envio = false

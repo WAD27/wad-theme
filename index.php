@@ -2,8 +2,6 @@
 
 include "header.php";
 
-// include "secciones/home/inicio.php";
-include "secciones/mantenimiento/contenido.php";
-
+include "secciones/home/inicio.php";  
 
 include "footer.php";
